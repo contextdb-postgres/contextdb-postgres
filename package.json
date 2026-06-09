@@ -1,0 +1,79 @@
+{
+  "name": "contextdb-postgres",
+  "version": "0.1.0",
+  "description": "Governed Context Database for Enterprise AI — a PostgreSQL-native schema, RLS templates, and TypeScript SDK for permission-aware, auditable AI context memory.",
+  "license": "Apache-2.0",
+  "author": "Intelligent Context AI <hello@contextdb.io>",
+  "homepage": "https://contextdb.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contextdb-postgres/contextdb-postgres.git"
+  },
+  "bugs": {
+    "url": "https://github.com/contextdb-postgres/contextdb-postgres/issues"
+  },
+  "keywords": [
+    "contextdb",
+    "postgresql",
+    "enterprise-ai",
+    "context-management",
+    "rag",
+    "ai-memory",
+    "governance",
+    "multi-tenant",
+    "rls",
+    "row-level-security",
+    "audit",
+    "llm",
+    "agent-memory",
+    "permissions"
+  ],
+  "type": "module",
+  "main": "./dist/sdk/client.js",
+  "types": "./dist/sdk/client.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/sdk/client.js",
+      "types": "./dist/sdk/client.d.ts"
+    },
+    "./sdk/types": {
+      "import": "./dist/sdk/types.js",
+      "types": "./dist/sdk/types.d.ts"
+    },
+    "./sdk/tenant": {
+      "import": "./dist/sdk/tenant.js",
+      "types": "./dist/sdk/tenant.d.ts"
+    },
+    "./sdk/read": {
+      "import": "./dist/sdk/read.js",
+      "types": "./dist/sdk/read.d.ts"
+    },
+    "./sdk/write": {
+      "import": "./dist/sdk/write.js",
+      "types": "./dist/sdk/write.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "schema/",
+    "recipes/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "pg": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
