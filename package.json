@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Governed Context Database for Enterprise AI — a PostgreSQL-native schema, RLS templates, and TypeScript SDK for permission-aware, auditable AI context memory.",
   "license": "Apache-2.0",
-  "author": "Intelligent Context AI <hello@contextdb.io>",
-  "homepage": "https://contextdb.io",
+  "author": "Intelligent Context AI <hello@contextdb.co>",
+  "homepage": "https://contextdb.co",
   "repository": {
     "type": "git",
     "url": "https://github.com/contextdb-postgres/contextdb-postgres.git"
